@@ -1,7 +1,23 @@
-.ipynb_checkpoints/
+# Env files (VERY IMPORTANT)
+.env
+**/.env
 
-myapp/
-venv/
-.env/
+# If .env is inside langchain folder
+langchain/.env
+
+# Python cache
 __pycache__/
 *.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+.env/
+
+# Other folders you don’t want in repo
+myapp/
+
+# OS files (optional but good)
+.DS_Store
