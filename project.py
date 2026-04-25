@@ -1,7 +1,6 @@
 from langchain_ollama import ChatOllama
 from langchain_core.prompts import PromptTemplate
-
-templates = PromptTemplate()
+ 
 
 llm = ChatOllama(model='llama3')
 
