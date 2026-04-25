@@ -16,6 +16,7 @@ __pycache__/
 venv/
 .env/
 
+./LANGCHAIN-CHATBOT-PROJECT\prompts_ui.py
 # Other folders you don’t want in repo
 myapp/
 
