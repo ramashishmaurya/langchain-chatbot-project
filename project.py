@@ -1,7 +1,7 @@
 from langchain_ollama import ChatOllama
 from langchain_core.prompts import PromptTemplate
  
-
+templates =''' '''
 llm = ChatOllama(model='llama3')
 
 import streamlit as st 
@@ -11,7 +11,7 @@ input_text = st.text_input('Enter the query_here')
 
 # this is simple a chain models right 
 if st.button('summarize'): 
-    chain = templates | llm 
+    chain = templates | llm  # this is chain in langchain 
     chat = llm.invoke(input_text) # invoke here
     # gives the input in this parameters
     chat2 = chain.invoke({
