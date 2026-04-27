@@ -1,6 +1,11 @@
 from langchain_ollama import ChatOllama
 import streamlit as st 
 from langchain_core.messages import HumanMessage ,AIMessage , SystemMessage 
+from langchain_core.prompts import PromptTemplate , ChatPromptTemplate
+message = ChatPromptTemplate([
+  ('system' , 'system is useful nature helping') , 
+ 
+])
 
 model = ChatOllama(model='llama3')
 chat_history =[
@@ -10,6 +15,7 @@ chat_history =[
 
 
 # start leveling the our humna and System and ai genereted 
+
 while True:
     user_input = input('You : ')
     chat_history.append(HumanMessage(content=user_input))
@@ -22,3 +28,6 @@ while True:
 
 print(chat_history)
 
+# while appending the assign that time some label this is comming from system and human aisystem 
+
+# for every tools there is formate kind of need a formate data to store 
