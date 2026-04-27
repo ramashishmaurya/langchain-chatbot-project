@@ -26,3 +26,5 @@ chain = templates |model | parser  # this is chnain is making the things easier 
 
 result = chain.invoke({})
 print(result)
+
+
