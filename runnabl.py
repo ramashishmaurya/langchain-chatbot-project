@@ -1,7 +1,7 @@
 from langchain_ollama import ChatOllama
 
 from langchain_core.output_parsers import StrOutputParser 
-from langchain_core.runnables import RunnableSequence
+from langchain_core.runnables import RunnableSequence , RunnableParallel
 
 # runnableSequence can run this sequence the 
 
@@ -31,7 +31,26 @@ chain =prompts2 |model | parser | prompts3 | model | parser
 # })
 
 prompts = PromptTemplate(
-    template='generates the '
+    template='generates the twits about {topic}' , 
+    input_variables=['topic']
 )
 
+prompts1 = PromptTemplate(
+    template='generate the post for linkedin {topic}' , 
+    input_variables=['topic']
+)
+# runnable parameter help us to combine to models 
 
+parr_chain = RunnableParallel({
+    'tweets':RunnableSequence(prompts ,model ,parser) , 
+    'linkedin':RunnableSequence(prompts1,model ,parser)
+}
+)
+
+result = parr_chain.invoke({
+    'topic':'AI'
+})
+
+print(result['tweets'])
+print('**************************')
+print(result['linkedin'])
