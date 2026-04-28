@@ -14,4 +14,3 @@ new_model = model.with_structured_output(revies)
 
 result = new_model.invoke('i am good a boys i do stufdy well and always comes firts for my right also give sentiment like good bad ')
 print(result)
-

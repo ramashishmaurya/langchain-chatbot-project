@@ -31,5 +31,3 @@ print(result2)
 
 chain2.get_graph().print_ascii()
 
-
-
