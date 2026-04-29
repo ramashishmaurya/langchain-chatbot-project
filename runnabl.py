@@ -54,3 +54,8 @@ result = parr_chain.invoke({
 print(result['tweets'])
 print('**************************')
 print(result['linkedin'])
+
+from langchain_core.runnables import RunnablePassthrough
+
+passthrou = RunnablePassthrough() 
+

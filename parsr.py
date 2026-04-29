@@ -39,4 +39,13 @@ result = chain.invoke({
 
 print(result)
 
-# that make the sense 
+
+# Image save 
+chain.get_graph().draw_png("chain_diagram.png")
+
+
+print('tje vakues has to make sure ')
+
+
+
+
