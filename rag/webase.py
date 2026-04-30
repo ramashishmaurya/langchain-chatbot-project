@@ -20,9 +20,10 @@ docs = loader.load()
 
 
 
-chain = prompts | model | parser
+chain = prompts | model | parser 
 
 print(chain.invoke({
     'question':'what is name of model' , 
     'text':docs[0].page_content
 }))
+ 
