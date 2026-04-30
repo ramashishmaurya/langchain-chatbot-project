@@ -1,4 +1,4 @@
-from langchain_core.runnables import RunnableLambda , RunnableParallel , RunnableSequence , RunnablePassthrough
+from langchain_core.runnables import RunnableLambda , RunnableParallel , RunnableSequence , RunnablePassthrough,RunnableBranch
 
 def word_counter(text):
     return len(text.split())
@@ -19,3 +19,12 @@ runnableparallel = RunnableParallel(
     'run2' , RunnableLambda(word_counter) , 
     'run3' , RunnablePassthrough() # when u dont want to send to the llm 
 )
+
+
+runnablebranch = RunnableBranch(
+    (lambda x :len(x.split()) > 500 , RunnableSequence) ,
+     RunnablePassthrough
+     )
+
+# when this condition is treu then exicute the if part otherwise else runnablepassthrough
+ 

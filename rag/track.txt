@@ -1,0 +1,33 @@
+# Documenents loader 
+1 -   TextLoader 
+ans - this is basic textloader laod text in list 
+after that u can access the content and metadata 
+
+# PyPDFReader 
+
+like textloader this is also load the pdf on basis of pages number 
+store each page number data and metadata 
+
+# working with table / columns 
+ -- PDFPlumberLoader 
+
+ # ScannedImage / imagesPDf 
+
+--------  UnstructurePDFLoader , AmazonTexteractLoader 
+
+
+# need payout and images 
+
+----PyMUPDFloader
+
+# this all the type of loader is available as per the types of data 
+
+# directoryLoader is use when u wnat to load a folder data means there can be multiple pdf inside the folder 
+in this case this can be used 
+
+
+#webbaseloader 
+this laoder is use for load the data that available  on the internet 
+
+u can load and use it 
+
